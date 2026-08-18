@@ -34,18 +34,17 @@ Este repositório contém a suíte de testes automatizados para o fluxo de **Che
 ## Estrutura do Projeto
 
 ```
-bugcrushers-saucedemo-cypress/
+qa-avanti-saucedemo-cypress/
 ├── cypress/
 │   ├── e2e/
-│   │   ├── checkout_campos_vazios.cy.js      # CT002
-│   │   ├── checkout_finalizar_pedido.cy.js   # CT005
-│   │   └── checkout_chars_especiais.cy.js    # CT006
-│   ├── fixtures/
-│   │   └── usuarios.json                     # dados de teste (credenciais)
-│   └── support/
-│       ├── commands.js
-│       └── e2e.js
+│   │   ├── checkout.cy_CT02.cy.js     # CT002 — campos obrigatórios em branco
+│   │   ├── checkout.cy_CT05.cy.js     # CT005 — conclusão do pedido
+│   │   └── checkout.cy_CT06.cy.js     # CT006 — caracteres especiais
+│   ├── fixtures/                      # dados de teste (credenciais e massa)
+│   └── support/                       # comandos customizados e configurações
+├── .gitignore
 ├── cypress.config.js
+├── package-lock.json
 ├── package.json
 └── README.md
 ```
@@ -58,8 +57,8 @@ bugcrushers-saucedemo-cypress/
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/bugcrushers/bugcrushers-saucedemo-cypress.git
-cd bugcrushers-saucedemo-cypress
+git clone https://github.com/Glaucivania/qa-avanti-saucedemo-cypress.git
+cd qa-avanti-saucedemo-cypress
 
 # Instalar dependências
 npm install
@@ -79,7 +78,7 @@ npx cypress run
 |---|---|---|
 | `standard_user` | `secret_sauce` | CT002, CT005, CT006 |
 
-As credenciais são armazenadas em `cypress/fixtures/usuarios.json` e **não devem** ser inseridas diretamente nos arquivos de teste.
+As credenciais são armazenadas em `cypress/fixtures/` e **não devem** ser inseridas diretamente nos arquivos de teste.
 
 ---
 
@@ -96,11 +95,11 @@ As credenciais são armazenadas em `cypress/fixtures/usuarios.json` e **não dev
 
 ## Resultados da Execução
 
-| Teste | Status | Duração Aproximada |
-|---|---|---|
-| CT002 — Campos em branco | ✅ Passou | ~18 min |
-| CT005 — Conclusão do pedido | ✅ Passou | ~24 min |
-| CT006 — Caracteres especiais | ❌ Falhou (bug conhecido) | ~18 min |
+| Teste | Arquivo | Status | Duração Aproximada |
+|---|---|---|---|
+| CT002 — Campos em branco | `checkout.cy_CT02.cy.js` | ✅ Passou | ~18 min |
+| CT005 — Conclusão do pedido | `checkout.cy_CT05.cy.js` | ✅ Passou | ~24 min |
+| CT006 — Caracteres especiais | `checkout.cy_CT06.cy.js` | ❌ Falhou (bug conhecido) | ~18 min |
 
 > Tempo total de execução automatizada: **~1 hora**
 > Equivalente manual: **~2 dias**
@@ -125,6 +124,7 @@ As credenciais são armazenadas em `cypress/fixtures/usuarios.json` e **não dev
 |---|---|
 | Glaucivania Gomes | Team Leader e Analista de QA |
 | Diogo Ferreira | Analista de QA |
+
 
 ---
 
