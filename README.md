@@ -6,7 +6,7 @@ Testes end-to-end automatizados para o [SauceDemo](https://www.saucedemo.com) ut
 
 ## Sobre o Projeto
 
-Este repositório contém a suíte de testes automatizados para o fluxo de **Checkout** do SauceDemo — cenário identificado como o mais crítico para o negócio. Os 3 casos de teste automatizados foram selecionados com base nos resultados da execução manual, priorizando a cobertura de bugs e a validação E2E do fluxo principal de compra.
+Este repositório contém a suíte de testes automatizados para o fluxo de **Checkout** do SauceDemo sendo o cenário identificado como o mais crítico para o negócio. Os 3 casos de teste automatizados foram selecionados com base nos resultados da execução manual, priorizando a cobertura de bugs e a validação E2E do fluxo principal de compra.
 
 ---
 
